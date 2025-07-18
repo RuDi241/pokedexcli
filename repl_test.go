@@ -26,6 +26,7 @@ func TestCleanInput(t *testing.T) {
 		if len(actual) != len(c.expected) {
 			t.Errorf("Failed test case:\n input: %v\noutput: %v\nexpected: %v\n", c.input, actual, c.expected)
 			t.Fail()
+			return
 		}
 
 		// Check every word
@@ -35,6 +36,7 @@ func TestCleanInput(t *testing.T) {
 			if word != expectedWord {
 				t.Errorf("Failed test case:\n input: %v\noutput: %v\nexpected: %v\n", c.input, actual, c.expected)
 				t.Fail()
+				return
 			}
 		}
 	}
