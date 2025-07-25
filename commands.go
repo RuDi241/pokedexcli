@@ -60,10 +60,10 @@ func commandExit(conf *commandData) error {
 }
 
 func commandHelp(conf *commandData) error {
-	message := "Welcome to the Pokedex!\nUsage:\n\n"
+	message := "Welcome to the Pokedex!\nUsage:\n"
 
 	for _, c := range commands {
-		message += fmt.Sprintf("%v: %v\n", c.name, c.description)
+		message += fmt.Sprintf("  %v: %v\n", c.name, c.description)
 	}
 
 	fmt.Print(message)
