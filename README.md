@@ -19,7 +19,7 @@ Navigate different location areas, view wild Pokémon, and build your personal P
 ## 🛠 Installation
 
 ```bash
-git clone https://github.com/yourusername/pokedexcli.git
+git clone https://github.com/RuDi241/pokedexcli.git
 cd pokedexcli
 go build -o pokedex
 ./pokedex
@@ -35,16 +35,16 @@ When launched, PokedexCLI runs in a REPL loop where you can enter the following 
 
 ### 🧾 Available Commands
 
-| Command           | Description                                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| `help`           | Displays this help message                                                  |
-| `exit`           | Exits the application                                                       |
-| `map`            | Displays the next 20 Pokémon location areas                                 |
-| `mapb`           | Displays the previous 20 Pokémon location areas                             |
-| `explore <area>` | Lists Pokémon that can be encountered in the given location area            |
-| `catch <name>`   | Attempts to catch the specified Pokémon                                     |
-| `inspect <name>` | Displays detailed info about a caught Pokémon                               |
-| `pokedex`        | Lists all Pokémon currently caught in your Pokédex                          |
+| Command          | Description                                                      |
+| ---------------- | ---------------------------------------------------------------- |
+| `help`           | Displays this help message                                       |
+| `exit`           | Exits the application                                            |
+| `map`            | Displays the next 20 Pokémon location areas                      |
+| `mapb`           | Displays the previous 20 Pokémon location areas                  |
+| `explore <area>` | Lists Pokémon that can be encountered in the given location area |
+| `catch <name>`   | Attempts to catch the specified Pokémon                          |
+| `inspect <name>` | Displays detailed info about a caught Pokémon                    |
+| `pokedex`        | Lists all Pokémon currently caught in your Pokédex               |
 
 ---
 
@@ -64,7 +64,7 @@ If the probability exceeds a random threshold, the Pokémon is caught and added 
 
 ```
 go run .
-Pokedex > map         
+Pokedex > map
 canalave-city-area
 eterna-city-area
 pastoria-city-area
@@ -101,19 +101,19 @@ Found Pokemon:
  - lumineon
 Pokedex > catch tentacool
 Throwing a Pokeball at tentacool...
-Catch probability: 0.5904433431907248 
+Catch probability: 0.5904433431907248
 tentacool was caught!
 Pokedex > inspect tentacool
 Name: tentacool
 Height: 9
 Weight: 455
 Stats:
-	-hp: 40
-	-attack: 40
-	-defense: 35
-	-special-attack: 50
-	-special-defense: 100
-	-speed: 70
+ -hp: 40
+ -attack: 40
+ -defense: 35
+ -special-attack: 50
+ -special-defense: 100
+ -speed: 70
 Types:
  - water
  - poison
