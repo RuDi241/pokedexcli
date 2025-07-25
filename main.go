@@ -58,10 +58,10 @@ func main() {
 		text := scanner.Text()
 		words := cleanInput(text)
 		if len(words) <= 0 {
-			fmt.Println("Enter a command")
+			fmt.Println("Enter a command, or type 'help' to see available commands")
+			continue
 		}
 		if val, ok := commands[words[0]]; ok {
-
 			cmdData.args = words[1:]
 			err := val.callback(&cmdData)
 			if err != nil {
