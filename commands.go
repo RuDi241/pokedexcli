@@ -135,7 +135,7 @@ func commandCatch(conf *commandData) error {
 	}
 
 	fmt.Printf("Throwing a Pokeball at %v...\n", conf.args[0])
-	catchProb := 5 * conf.basePokemonCatchChance / math.Log(float64(responseData.BaseExperience)+2)
+	catchProb := conf.pokemonCatchChanceMultiplier / math.Log(float64(responseData.BaseExperience)+2)
 	fmt.Printf("Catch probability: %v \n", catchProb)
 
 	if catchProb >= rand.Float64() {

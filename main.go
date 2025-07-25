@@ -23,10 +23,10 @@ type cliCommand struct {
 }
 
 type commandData struct {
-	prevArea               string
-	nextArea               string
-	args                   []string
-	basePokemonCatchChance float64
+	prevArea                     string
+	nextArea                     string
+	args                         []string
+	pokemonCatchChanceMultiplier float64
 }
 
 // Supported CLI commands
@@ -41,7 +41,7 @@ func init() {
 	cache = pokecache.NewCache(cacheLifetime)
 
 	cmdData.prevArea = ""
-	cmdData.basePokemonCatchChance = 0.5
+	cmdData.pokemonCatchChanceMultiplier = 2.5
 	cmdData.nextArea = baseURL + "location-area"
 	caughtPokemons = make(map[string]pokemonData)
 }

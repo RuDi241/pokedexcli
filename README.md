@@ -53,7 +53,13 @@ When launched, PokedexCLI runs in a REPL loop where you can enter the following 
 The chance to catch a Pokémon is based on the following formula:
 
 ```
-catch probability = (5 × baseCatchChance) / log(baseExperience + 2)
+catch probability = (pokemonCatchChanceMultiplier) / log(baseExperience + 2)
+```
+
+Default value:
+
+```
+pokemonCatchChanceMultiplier = 2.5
 ```
 
 If the probability exceeds a random threshold, the Pokémon is caught and added to your Pokédex.
